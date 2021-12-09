@@ -63,6 +63,7 @@ class ArticoloListView(ListView):
         context["articoli"]=Articolo.objects.all()
         return context
 
+
 class GiornalistaDetailViewCB(DetailView):
     model=Giornalista
     template_name="giornalista_detail.html"
