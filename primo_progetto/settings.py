@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-s#j!5c06zxes&p0o%so*7&f@j+)h0oh$=^j3)mr5ezz7gda1fd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['giamboiedoardo.eu.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*', ' giamboiedoardo.eu.pythonanywhere.com ', '127.0.0.0']
+#giamboiedoardo.eu.pythonanywhere.com
 
 
 # Application definition
@@ -40,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'prima_applicazione',
     'seconda_applicazione',
-]
+    'news',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'primo_progetto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'), os.path.join(BASE_DIR, 'seconda_applicazione/templates'),os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'), os.path.join(BASE_DIR, 'seconda_applicazione/templates'),os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'news/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
