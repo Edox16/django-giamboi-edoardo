@@ -23,6 +23,6 @@ urlpatterns=[
     path('', include("prima_applicazione.urls", namespace="prima_applicazione")),
     path('seconda_applicazione/', include("seconda_applicazione.urls", namespace="seconda_applicazione")),
     path('news/', include("news.urls", namespace="urls")),
-    path('prova_pratica_1/', include("prova_pratica_1.urls"), namespace="prova_pratica_1"),
+    path('prova_pratica_1/', include("prova_pratica_1.urls", namespace="prova_pratica_1")),
     #path('news/', include("news", namespace="news")),
 ]
