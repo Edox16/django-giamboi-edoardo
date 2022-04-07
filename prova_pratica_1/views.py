@@ -1,4 +1,8 @@
+import json
+from urllib import response
 from django.shortcuts import render
+from django.http import JsonResponse
+
 
 # Create your views here.
 
@@ -15,3 +19,11 @@ def view_c(request):
            'Nicola Spina':[("Matematica",7.5,2),("Italiano",6,2),("Inglese",4,3),("Storia",8.5,2),("Geografia",8,2)]}
     }
     return render(request, "view_c.html", context)
+
+def materie_list(request):
+    context={
+        'materie': ['Matematica', 'Italiano', 'Inglese', 'Storia', 'Geografia'],
+    }
+    response=JsonResponse(context)
+    return response 
+       
